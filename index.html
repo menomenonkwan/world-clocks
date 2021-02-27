@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Clocks</title>
+  <link rel="stylesheet" href="worldclocks.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  <style>
+    @media (max-width: 700px) {
+      header {
+        min-height: 200px;
+      }
+      header h1::before, header h1::after {
+        width: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>World Clock</h1>
+      <p class="local-date"></p>
+      <p class="local-time"></p>
+    </header>
+    <div class="time-display"></div>
+  </div>
+
+  <script src="worldclocks.js"></script>
+</body>
+
+</html>

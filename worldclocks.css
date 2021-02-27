@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Jost&display=swap");
+header {
+  background: #1b4562;
+  color: #35b4ab;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  height: 100vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 2px 1px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header h1::before {
+  content: "";
+  margin: 0 15px;
+  display: block;
+  background: -webkit-gradient(linear, right top, left top, from(#dec74a), to(#1b4562));
+  background: linear-gradient(to left, #dec74a, #1b4562);
+  border-radius: 2px;
+  width: 150px;
+  height: 15px;
+}
+
+header h1::after {
+  content: "";
+  display: block;
+  margin: 0 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#dec74a), to(#1b4562));
+  background: linear-gradient(to right, #dec74a, #1b4562);
+  border-radius: 2px;
+  width: 150px;
+  height: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-family: 'Jost', sans-serif;
+}
+
+.city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-shadow: 0 1px 1px #000;
+}
+
+.city h2 {
+  font-size: 1.5rem;
+}
+
+.city span {
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.city::after {
+  content: "";
+  display: block;
+  width: 45px;
+  -webkit-box-shadow: 0px 25px 25px 5px black;
+          box-shadow: 0px 25px 25px 5px black;
+}
+
+.clock {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.clock .face {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dec74a), to(rgba(222, 199, 74, 0.5)));
+  background: linear-gradient(#dec74a, rgba(222, 199, 74, 0.5));
+}
+
+.clock .center {
+  border-radius: 50%;
+  width: 10%;
+  background: black;
+  height: 10%;
+  position: absolute;
+  left: 44%;
+  top: 46%;
+  z-index: 1;
+}
+
+.clock .hours {
+  background: #000;
+  border-radius: 25% 0 0 25%;
+  width: 38px;
+  height: 5px;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  position: absolute;
+  top: 49%;
+  left: 11%;
+}
+
+.clock .minutes {
+  background: #333;
+  border-radius: 25% 0 0 25%;
+  width: 45px;
+  height: 2px;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  position: absolute;
+  top: 49%;
+  left: 5%;
+}
+
+.clock .seconds {
+  background: brown;
+  border-radius: 25% 0 0 25%;
+  width: 45px;
+  height: 1px;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+          transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+.clock .sunshine {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  color: #1b4562;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #85144B;
+  color: #FF851B;
+  font-family: 'Cabin Condensed', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-display {
+  padding: 50px 0;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 200px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  gap: 75px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 700px) {
+  header {
+    min-height: 200px;
+  }
+  header h1::before, header h1::after {
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=worldclocks.css.map */
